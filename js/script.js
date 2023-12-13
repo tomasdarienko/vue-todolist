@@ -30,6 +30,8 @@ createApp({
           }
      },
      methods:{
-
+          delet(index){
+               this.todolist.splice(index,1);
+          }
      }
 }).mount('#app')

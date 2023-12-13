@@ -19,7 +19,16 @@
 
                          <div>
                               <ul>
-                                   <li v-for="(todo,index) in todolist" :key="index" :class="todo.done == true ? 'text-decoration-line-through': '' ">{{ todo.text }}</li>
+                                   <li v-for="(item,index) in todolist" :key="index"
+                                        :class="item.done == true ? 'text-decoration-line-through': '' ">
+                                        <span class="p-3 mt-5">
+                                             {{ item.text }}
+                                        </span>
+                                        <button class="btn btn-sm btn-danger mt-1" @click="delet(index)">
+                                             X
+                                        </button>
+
+                                   </li>
                               </ul>
                          </div>
                     </div>
